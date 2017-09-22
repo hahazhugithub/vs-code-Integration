@@ -1,0 +1,27 @@
+{
+  "name": "intellisense",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:js": " eslint -c .eslintrc --quiet --cache src/",
+    "debug": "node --debug ./src/server/server.js",
+    "build": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "sassdoc": "^2.3.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "lodash": "^4.17.4"
+  }
+}

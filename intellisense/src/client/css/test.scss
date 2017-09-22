@@ -1,0 +1,54 @@
+/// Helper mixin to size elements in a single line.
+/// This mixin is essentially a short hand to define
+/// both `width` and `height` simultaneously.
+///
+/// @group shorthand
+/// @author Hugo Giraudel
+///
+/// @param {Length} $width - Element's width
+/// @param {Length} $height [$width] - Element's height
+/// @output `width` and `height`
+///
+/// @example scss - Sizing `.foo`
+///   .foo {
+///     @include size(100%, 3em);
+///   }
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+$background: #caa;
+$border-color:#ddd;
+$container-bk-color:#fff;
+
+body {
+    background: $background;
+    padding:0;
+    margin:0;
+    font: 12px Verdana;
+}
+
+.header {
+    width:100%;
+    height: 200px;
+    background: url(../../assets/image/gulp-top.jpg) top/cover;
+}
+
+.container {
+    padding: 30px 20px;
+    margin: 0px auto;
+    width:80%;
+    min-height: 250px;
+    background-color: $container-bk-color;
+    border-left: 2px solid $border-color;
+    border-right: 2px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    h2 {
+        margin:0px;
+        font: bold 24px Verdana;
+        text-align: center;
+    }
+}
